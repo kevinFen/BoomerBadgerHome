@@ -1,6 +1,6 @@
 body{
     background-image:url("login/background.jpg");
-    background-size: 200%;
+    background-size: 2000px 800px;
     background-repeat: no-repeat;
 }
 
@@ -9,8 +9,8 @@ body{
     height:260px;
     padding:13px;
     position: absolute;
-    left: 40%;
-    top:40%;
+    left: 50%;
+    top:50%;
     margin-left: -200px;
     margin-top: -200px;
     background-color:rgba(240,255,255,0.5);
