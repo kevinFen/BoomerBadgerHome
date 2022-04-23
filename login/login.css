@@ -1,0 +1,82 @@
+body{
+    background-image:url("login/background.jpg");
+    background-size: 200%;
+    background-repeat: no-repeat;
+}
+
+#login_frame{
+    width:400px;
+    height:260px;
+    padding:13px;
+    position: absolute;
+    left: 40%;
+    top:40%;
+    margin-left: -200px;
+    margin-top: -200px;
+    background-color:rgba(240,255,255,0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+frame p > *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#image_logo{
+    margin-top: 22px;
+}
+
+.label_input{
+    front-size: 12px;
+    front-family: Times_New_Roman;
+    width:70px;
+    height:30px;
+    line-height:28px;
+    text-align:center;
+    color: black;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border:0;
+}
+
+.text_field{
+    width: 280px;
+    height: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border:0;
+}
+
+#btn_login{
+    front-size: 12px;
+    front-family: Times_New_Roman;
+    width:70px;
+    height:30px;
+    line-height:28px;
+    text-align:center;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    border:0;
+    float: left;
+}
+
+#forget_password{
+    font-size: 12px;
+    color:black;
+    text-decoration:none;
+    position:relative;
+    float: right;
+    top:5px;
+}
+
+#forget_password:hover{
+    color:black;
+    text-decoration: underline;
+}
+
+#login_control{
+    padding: 0 28px;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script type="text/javascript" src="login.js"></script>
+</head>
+
+<body>
+<div id="login_frame">
+    <p id="image_logo">Welcome to this web</p>
+    <p><a href="file:///Users/zijianfeng/Desktop/9/index.html">HOME PAGE</a></p>
+    <from method="post" action="login.js">
+        <p><label class="label_input">UserName</label><input type="text" id="username" class="text_field"/></p>
+        <p><label class="label_input">Password</label><input type="text" id="password" class="text_field"/></p>
+        <div id="login_control">
+            <input type="button" id="btn_login" value = "Sign In" onclick="Sign_In();"/>
+            <a id="forget_password" href="forget_password.html">Forget Password?</a>
+        </div>
+    </from>
+</div>
+</body>
+</html>

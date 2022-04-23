@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div class="content">
+        <p class="logo g-m-r-32">BoomerBadgerHome</p>
+        <input type="text" placeholder="search location">
+        <div class="search">
+          <img src="search.png" alt="">
+        </div>
+        <div class="nav-list">
+          <span>Buy</span>
+          <span>Rent</span>
+          <span>Sell</span>
+          <span>Home Loans</span>
+        </div>
+        <div class="a-list">
+          <span>Advertise</span>
+          <span>Help</span>
+        </div>
+        <div class="button"><a href="file:///Users/zijianfeng/Desktop/9/login/Login.html">Sign Up</a> </div>
+        <onclick ="javascript:window.location.href='login/Login.html'"/>
+        <script>
+        function google(){
+        window.location.href = "www.google.ca"
+        }
+      </script>
+      </div>
+    </header>
+
+    <section class="filter g-p-t-16">
+      <p class="tips">18 appear from 297 Results</p>
+      <h1 class="g-m-t-16">Search Results <span>'St.Catharines'</span></h1>
+      <div class="filter-content g-m-t-16">
+        <div class="tag-wrap g-m-r-16">
+          <div class="tag fill">Buy</div>
+          <div class="tag">Rent</div>
+          <div class="tag">Sell</div>
+        </div>
+        <div class="tag fill g-m-r-16">House X</div>
+        <div class="tag g-m-r-16">Rooms v</div>
+        <div class="tag g-m-r-16">Price v</div>
+        <div class="tag g-m-r-16">Ketwords v</div>
+        <div class="tag g-m-r-16">More v</div>
+        <div class="button stroke">Save Search</div>
+        <div class="switch-wrap">
+          <p class="switch"></p>
+          <p>Show Maps</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="main">
+      <div class="card-list"></div>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.3785624265765!2d-79.24988118438861!3d43.117573079143305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d34e32f9f0e4a5%3A0xdb7b89e6cdaba7d2!2z5biD5rSb5YWL5aSn5a24!5e0!3m2!1szh-CN!2sca!4v1647983198457!5m2!1szh-CN!2sca" width="950" height="950" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+   
+    </section>
+
+    <section class="pager">
+      <div class="item active">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">→</div>
+    </section>
+  </div>
+
+  <script>
+    const cl = document.querySelector('.card-list')
+    const cardList = [
+      {
+        cover: 'cover.jpeg',
+        type: 'NEW',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      }, {
+        cover: 'cover.jpeg',
+        type: 'SALE',
+        color: 'rgb(184, 140, 186)',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      }, {
+        cover: 'cover.jpeg',
+        type: 'RECOMMENDED',
+        color: 'rgb(38, 132, 147)',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      }, {
+        cover: 'cover.jpeg',
+        type: 'NEW',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      }, {
+        cover: 'cover.jpeg',
+        type: 'SALE',
+        color: 'rgb(184, 140, 186)',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      }, {
+        cover: 'cover.jpeg',
+        type: 'RECOMMENDED',
+        color: 'rgb(38, 132, 147)',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      }, {
+        cover: 'cover.jpeg',
+        type: 'NEW',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      }, {
+        cover: 'cover.jpeg',
+        type: 'SALE',
+        color: 'rgb(184, 140, 186)',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      }, {
+        cover: 'cover.jpeg',
+        type: 'RECOMMENDED',
+        color: 'rgb(38, 132, 147)',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      }, {
+        cover: 'cover.jpeg',
+        type: 'NEW',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      }, {
+        cover: 'cover.jpeg',
+        type: 'SALE',
+        color: 'rgb(184, 140, 186)',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      }, {
+        cover: 'cover.jpeg',
+        type: 'RECOMMENDED',
+        color: 'rgb(38, 132, 147)',
+        price: '$24,000,000',
+        desc: '1998 Wufma Point Minnessota, St.Catharines'
+      },
+    ]
+    const html = []
+
+    cardList.forEach(item => {
+      html.push(`
+        <div class="card">
+          <div class="cover">
+            <img src="${item.cover}" alt="">
+            <div class="type" style="color:${item.color}">${item.type}</div>
+            <img class="like" src="like.png" alt="">
+          </div>
+          <h2>${item.price}</h2>
+          <div class="ssss">
+            <img src="bd.png" alt="">
+            <span>4bd</span>
+            <img src="tt.png" alt="">
+            <span>6,5ba</span>
+            <img src="rule.png" alt="">
+            <span>8,725sqft</span>
+          </div>
+          <p class="desc">${item.desc}</p>
+        </div>
+      `)
+    })
+
+    cl.innerHTML = html.join('')
+  </script>
+</body>
+
+</html>
