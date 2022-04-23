@@ -7,9 +7,189 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="/cdn-cgi/apps/head/Iz1hkMph92amGqf8OsYBdeAleKc.js"></script>
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="https://api-frame.krunk.cn/main/assets/css/style.min.css">
+  <style>
+
+    {box-sizing: border-box;}
+
+    .loginbtu{
+      font-family: OpenSans-Regular;
+      color: #FFFFFF;
+      background-color: #009de0;
+      border: none;
+      display: inline-block;
+      padding: 8px 16px;
+      vertical-align: middle;
+      overflow: hidden;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      white-space: nowrap;
+      width: 80px;
+      border-radius: 15px;
+      margin-top: 9px;
+      position: fixed;
+      right:10px;
+      top:10px;
+      transition: 0.3s;
+    }
+
+    .loginbtu:hover {
+      background-color: #3fa7d4;
+      border-radius: 5px;
+    }
+
+    .logoutbtu{
+      background-color: #c00;
+    }
+
+    .logoutbtu:hover {
+      background-color: #fa2f2f;
+    }
+
+    .logintitle{
+      color: white;
+      text-align: center;
+    }
+
+    .form-popup {
+      display: none;
+      position: fixed;
+      top: 10%;
+      width: 50%;
+      max-width: 500px;
+      min-width: 300px;
+      border: 3px solid #f1f1f1;
+      background-color: rgba(256,256,256,.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 20px;
+      z-index: 9;
+      left: 50%;
+      transform: translate(-50%, 0);
+      -webkit-animation-name: fadeIn;
+      -webkit-animation-duration: 0.6s;
+      animation-name: fadeIn;
+      animation-duration: 0.6s
+    }
+
+    .form-container {
+      max-width: 500px;
+      padding: 10px;
+    }
+
+    .form-container input[type=text], .form-container input[type=password] {
+      width: 90%;
+      padding: 15px;
+      margin: 5px 5% 20px 5%;
+      border: none;
+      background: #f1f1f1;
+      border-radius: 20px;
+      -webkit-animation-name: btufadeIn;
+      -webkit-animation-duration: 0.6s;
+      animation-name: btufadeIn;
+      animation-duration: 0.6s;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+      opacity: 1;
+      width: 94%;
+      margin: 5px 3% 20px 3%;
+    }
+
+    .form-container .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 90%;
+      margin-bottom:10px;
+      opacity: 0.8;
+      border-radius: 20px;
+      background-color: rgb(76, 175, 80);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      -webkit-animation-name: btufadeIn;
+      -webkit-animation-duration: 0.6s;
+      animation-name: btufadeIn;
+      animation-duration: 0.6s;
+      transition: 0.3s;
+    }
+
+    .form-container .cancel {
+      border-radius: 20px;
+      opacity: 0.8;
+      background-color: rgb(255, 0, 0);
+    }
+
+    .form-container .btn:hover {
+      opacity: 1;
+      width: 94%;
+      /*margin-left: 3%;*/
+    }
+
+    @-webkit-keyframes fadeIn {
+      from {background-color: rgba(255,255,255,.5); border-radius: 50%; opacity: 0;width: 15%;}
+      to {background-color: rgba(255,255,255,.7); border-radius: 20px; opacity: 1;width: 50%;}
+    }
+
+    @keyframes fadeIn {
+      from {background-color: rgba(255,255,255,.5); border-radius: 50%; opacity: 0;width: 15%;}
+      to {background-color: rgba(255,255,255,.7); border-radius: 20px; opacity: 1;width: 50%;}
+    }
+
+    @-webkit-keyframes btufadeIn {
+      from {border-radius: 200px; opacity: 0}
+      to {border-radius: 20px; opacity: 0.8}
+    }
+
+    @keyframes btufadeIn {
+      from {width: 50%;border-radius: 200px; opacity: 0}
+      to {width: 90%;border-radius: 20px; opacity: 0.8}
+    }
+
+    #overlay {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 2;
+      cursor: pointer;
+      transition: 1s;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      -webkit-animation-name: overlayFadein;
+      -webkit-animation-duration: 1s;
+      animation-name: overlayFadein;
+      animation-duration: 1s;
+    }
+
+    @-webkit-keyframes overlayFadein {
+      from {opacity: 0}
+      to {opacity: 1}
+    }
+
+    @keyframes overlayFadein {
+      from {backdrop-filter: blur(0px);-webkit-backdrop-filter: blur(0px);}
+      to {backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);}
+    }
+    </style>
 </head>
 
 <body>
+<div id="overlay" onclick="closeForm();"></div>
   <div id="app">
     <header>
       <div class="content">
@@ -28,10 +208,45 @@
           <span>Advertise</span>
           <span>Help</span>
         </div>
-        <div class="button"><a href="login/Login.html">Sign Up</a> </div>
-        <onclick ="javascript:window.location.href='login/Login.html'"/>
-      </div>
+        <div class="button">
+          <a href="login/Login.html">Sign Up</a>
+          <onclick ="javascript:window.location.href='login/Login.html'"/>
+        </div>
+        <div class="button2">
+          <button class="loginbtu" id="loginbtu" onclick="openForm()">Login</button>
+        </div>
     </header>
+
+    <div class="form-popup" id="loginForm">
+      <form class="container max-width-sm padding-y-lg  login-form">
+        <div class="text-component text-center margin-bottom-sm">
+          <h1>Log in</h1>
+          <p>Welcome Back, Handsome/Beauty</p>
+        </div>
+
+        <div class="margin-bottom-sm">
+          <label class="form-label margin-bottom-xxxs" for="input-email">Email</label>
+          <input class="form-control width-100%" type="email" name="input-email" id="input-email" placeholder="email@myemail.com">
+        </div>
+
+        <div class="margin-bottom-sm">
+          <div class="flex justify-between margin-bottom-xxxs">
+            <label class="form-label" for="input-password">Password</label>
+            <span class="text-sm"><a href="#0">Forgot?</a></span>
+          </div>
+
+          <input class="form-control width-100%" type="password" name="input-password" id="input-password">
+        </div>
+
+        <div class="margin-bottom-sm">
+          <button class="btn btn--primary btn--md width-100%">Login</button>
+        </div>
+
+        <div class="text-center">
+          <p class="text-sm">Don't have an account? <a href="#0">Get started</a></p>
+        </div>
+      </form>
+    </div>
 
     <section class="filter g-p-t-16">
       <p class="tips">18 appear from 297 Results</p>
@@ -70,6 +285,29 @@
   </div>
 
   <script>
+    function openForm() {
+      olon();
+      document.getElementById("loginForm").style.display = "block";
+      document.getElementById("loginbtu").innerHTML="Close";
+      loginbtu.classList.add('logoutbtu');
+      document.getElementById("loginbtu").onclick=function() { closeForm() };
+    }
+    function closeForm() {
+      oloff()
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("loginbtu").innerHTML="Login";
+      loginbtu.classList.remove('logoutbtu');
+      document.getElementById("loginbtu").onclick=function() { openForm() };
+    }
+    function olon() {
+      document.getElementById("overlay").style.display = "block";
+      //document.getElementById("overlay").style.backdrop-filter = "blur(8px)";
+    }
+
+    function oloff() {
+      document.getElementById("overlay").style.display = "none";
+    }
+
     const cl = document.querySelector('.card-list')
     const cardList = [
       {
@@ -145,7 +383,7 @@
     const html = []
 
     cardList.forEach(item => {
-      html.push(`
+      html.push(`=
         <div class="card">
           <div class="cover">
             <img src="${item.cover}" alt="">
@@ -168,6 +406,7 @@
 
     cl.innerHTML = html.join('')
   </script>
+<script src="https://api-frame.krunk.cn/main/assets/js/scripts.min.js"></script>
 </body>
 
 </html>
